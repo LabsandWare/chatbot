@@ -1,12 +1,14 @@
+/* @flow */
 import React from 'react';
-import { Bot } from './components/bot';
+import ConnectedBot  from './components/connectedBot';
 import './App.css';
 
 
-class App extends React.PureComponent<{}> {
-  render() {
-    return  <Bot />;
-  }
+function App() {
+  
+  return  (
+    <ConnectedBot />
+  );
 }
 
 export default App;
