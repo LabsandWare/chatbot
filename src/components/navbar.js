@@ -1,7 +1,6 @@
 /* @flow */
 import React , { Component } from 'react';
 
-import './general.css';
 import law_icon from './law_icon.png';
 
 class NavBar extends Component {
@@ -16,8 +15,7 @@ class NavBar extends Component {
 
   handleClick = (e) =>  { 
     e.preventDefault();  
-    this.setState({hide: !this.state.hide})
-    console.log('The link was clicked.'); 
+    this.setState({hide: !this.state.hide});
   }
 
   render() {
@@ -25,7 +23,8 @@ class NavBar extends Component {
     let sub_menu = this.state.hide ? '': "show-submenu";
 
     return (
-        <nav className="navbar is-fixed-top is-success user-nav">
+      <div className="hero-head">
+        <nav className="navbar is-success user-nav">
           <div className="navbar-start">
             <div className="media">
                 <div className="media-left">
@@ -36,7 +35,7 @@ class NavBar extends Component {
                 <div className="media-content">
                     <div className="content">
                       <p>
-                          <strong>John</strong>
+                          <strong>Tim</strong>
                           <br />
                           <small>online</small>
                       </p>
@@ -55,7 +54,6 @@ class NavBar extends Component {
               </span>
               <nav className="submenu">
                 <ul className="submenu-items">
-                  <li className="submenu-item"><a href="https://legalnaija.com/" className="submenu-link">Home</a></li>
                   <li className="submenu-item"><a href="https://app.legalnaija.com" className="submenu-link">Contact Support</a></li>
                   <li className="submenu-item"><a href="https://app.legalnaija.com/lawyers" className="submenu-link">Find a Lawyer</a></li>
                   <li className="submenu-item"><a href="https://legalnaija.com/shop/" className="submenu-link">Get Legal Resource</a></li>
@@ -68,6 +66,7 @@ class NavBar extends Component {
             </div>
           </div>
         </nav>
+      </div>
     );
   }
 }

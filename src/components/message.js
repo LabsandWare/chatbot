@@ -1,11 +1,10 @@
-// @flow
+/* @flow */
 import React from 'react';
 import Markdown from 'react-markdown';
 import breaks from 'remark-breaks';
 import classnames from 'classnames';
 import type { ChatMessage } from './Board';
 import { noop } from '../utils';
-
 
 type MessageProps = {
   chat: ChatMessage,
@@ -19,7 +18,7 @@ const Message = ({chat, onButtonClick}: MessageProps) => {
   switch ( message.type ) {
     case "button":
       return (
-        <ul classnames="chat-button">
+        <ul className="chat-buttons">
           {message.buttons.map(({payload, title, selected }) =>(
               <li
                   className={classnames("chat-button", {
@@ -37,7 +36,7 @@ const Message = ({chat, onButtonClick}: MessageProps) => {
                     children={title}
                     skipHtml={false}
                     allowedTypeses={["root", "break"]}
-                    components={{
+                    renderers={{
                       paragraph: ({ children }) => <span>{children}</span>
                     }}
                     plugins={[breaks]}
@@ -72,10 +71,10 @@ const Message = ({chat, onButtonClick}: MessageProps) => {
                 "listItem",
                 "image"
               ]}
-              components={{
-                paragraph: ({children}) => <span>{children}</span>,
-                link: ({href, children}) => (
-                  <a href={href} target="_blank" rel="noopener noreferrer">
+              renderers={{
+                paragraph: ({ children }) => <span>{children}</span>,
+                link: ({ href, children }) => (
+                  <a href={href} target="_blank" rel="noreferrer">
                     {children}
                   </a>
                 )

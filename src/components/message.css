@@ -1,0 +1,105 @@
+.chats .chat {
+  background: rgba(255, 255, 255, 0.8);
+  position: relative;
+  padding: 5px 13px;
+  font-size: 14px;
+  border-radius: 10px;
+  list-style: none;
+  float: left;
+  clear: both;
+  margin: 10px 0 0 0;
+  max-width: 90%;
+}
+
+.chats .chat img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.chats .chat.left {
+  border-bottom-left-radius: 0;
+}
+.chats .chat.right {
+  float: right;
+  clear: both;
+  border-bottom-right-radius: 0;
+}
+.chats .chat .text {
+  word-wrap: break-word;
+}
+.chats .chat.chat-img {
+  padding: 5px;
+}
+.chats .chat a {
+  text-decoration: none;
+  color: #3498db;
+}
+.chats .chat ul, .chats .chat ol {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.chats .chat ul li, .chats .chat ol li {
+  padding-left: 0;
+}
+.chats .chat.waiting {
+  margin: 10px 0;
+  background: transparent;
+  padding: 0;
+}
+ 
+@keyframes fade {
+   from {
+    opacity: 1;
+  }
+   to {
+    opacity: 0.3;
+  }
+}
+
+.chats .chat.waiting span {
+  font-size: 1.5em;
+  animation-name: fade;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+.chats .chat.waiting span:nth-child(1) {
+  animation-delay: 0s;
+}
+.chats .chat.waiting span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.chats .chat.waiting span:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.chats .chat-buttons {
+  position: relative;
+  padding: 0;
+  font-size: 14px;
+  list-style: none;
+  clear: both;
+  margin: 10px 0;
+  text-align: center;
+}
+.chats .chat-buttons .chat-button {
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 3px;
+  background-color: rgba(52, 61, 78, 1);
+  color: white;
+  border: 2px solid white;
+  padding: 5px 10px;
+  letter-spacing: normal;
+  border-radius: 5px;
+}
+.chats .chat-buttons .chat-button:hover, .chats .chat-buttons .chat-button.chat-button-selected {
+  background-color: rgba(52, 61, 78, 0.6);
+  color: white;
+}
+.chats .chat-buttons .chat-button.chat-button-disabled {
+  color: grey;
+  border: 2px solid grey;
+}

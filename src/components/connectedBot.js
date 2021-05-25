@@ -46,8 +46,8 @@ class ConnectedBot extends Component<
     static defaultProps = {
       waitingTimeout: 5000,
       messageBlacklist: ["restart", "start", "/restart", "/start"],
-      host: "https://woodlandbot.herokuapp.com",
-      welcomeMessage: "Hi, I am John, your Virtual Legal Adviser"
+      host: process.env.REACT_APP_SERVER_URL,
+      welcomeMessage: "Hi, I am Tim, your Virtual Legal Adviser"
     };
 
     waitingForBotResponseTimer: ?TimeOutID = null;
@@ -231,7 +231,7 @@ class ConnectedBot extends Component<
         )
 
       return (
-        <div>
+        <section className="hero is-fullheight">
           <NavBar />
           <Board 
               messages={renderrableMessages}
@@ -240,7 +240,7 @@ class ConnectedBot extends Component<
               onSendMessage={this.sendMessage}
               ref={this.botRef}
             />
-        </div>
+        </section>
       );
     }
 
