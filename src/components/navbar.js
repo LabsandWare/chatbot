@@ -1,7 +1,7 @@
 /* @flow */
 import React , { Component } from 'react';
 
-import law_icon from './law_icon.png';
+import bot from './bot.jpeg';
 
 class NavBar extends Component {
 
@@ -29,13 +29,13 @@ class NavBar extends Component {
             <div className="media">
                 <div className="media-left">
                   <figure className="image is-48x48">
-                      <img src={law_icon} alt="bot icon" className="is-rounded" />
+                      <img src={bot} alt="bot icon" style={{height: "100%"}} className="is-rounded" />
                     </figure>
                 </div>
                 <div className="media-content">
                     <div className="content">
                       <p>
-                          <strong>Tim</strong>
+                          <strong>Lara</strong>
                           <br />
                           <small>online</small>
                       </p>

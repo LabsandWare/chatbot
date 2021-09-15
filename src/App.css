@@ -182,7 +182,7 @@ html, body {
 
 .messages-window {
   height: 100%;
-  width: 90%;
+  width: 92.5%;
   overflow: hidden;
   box-sizing: border-box;
   position: absolute !important;

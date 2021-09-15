@@ -7,7 +7,7 @@
   list-style: none;
   float: left;
   clear: both;
-  margin: 10px 0 0 0;
+  margin: 10px 0;
   max-width: 90%;
 }
 
@@ -88,7 +88,7 @@
   transition: all 0.3s ease;
   cursor: pointer;
   margin: 3px;
-  background-color: rgba(52, 61, 78, 1);
+  background-color: rgba(29, 135, 83, 1);
   color: white;
   border: 2px solid white;
   padding: 5px 10px;

@@ -47,7 +47,7 @@ class ConnectedBot extends Component<
       waitingTimeout: 5000,
       messageBlacklist: ["restart", "start", "/restart", "/start"],
       host: process.env.REACT_APP_SERVER_URL,
-      welcomeMessage: "Hi, I am Tim, your Virtual Legal Adviser"
+      welcomeMessage: "Hi, I am Lara, Legalnaija Automated Research Assistant"
     };
 
     waitingForBotResponseTimer: ?TimeOutID = null;
