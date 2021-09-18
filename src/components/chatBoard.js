@@ -185,6 +185,22 @@ class Board extends Component<BoardProps, BoardState> {
     const isClickable = i =>
       !waitingForBotResponse && i === messageGroups.length - 1;
 
+    const renderInputForm = () => {
+      if (!waitingForBotResponse) {
+        return (
+          <input className="input" 
+            type="text" 
+            value={this.state.inputValue}
+            onChange={event =>
+              this.handleInputChange(event.currentTarget.value)
+            }
+            ref={this.inputRef}
+            placeholder="Type your message..." />);
+      } else {
+        return null;
+      }
+    }
+
     return(
         <>
           <div className="hero-body">
@@ -207,14 +223,7 @@ class Board extends Component<BoardProps, BoardState> {
             <form onSubmit={this.handleSubmitMessage}>
               <div className="field has-addons">
                 <div className="control is-expanded">
-                  <input className="input" 
-                    type="text" 
-                    value={this.state.inputValue}
-                    onChange={event =>
-                      this.handleInputChange(event.currentTarget.value)
-                    }
-                    ref={this.inputRef}
-                    placeholder="Type your message..." />
+                  {renderInputForm()}
                 </div>
                 <div className="control">
                   <button className="button">
